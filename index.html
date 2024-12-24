@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Yasin Miah - Software Engineer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Tailwind Configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#475569',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white dark:bg-gray-900 shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary">YM</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-primary">Home</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-primary">About</a>
+                    <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-primary">Skills</a>
+                    <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-primary">Experience</a>
+                    <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-primary">Projects</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-primary">Contact</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    
+                    <button class="md:hidden" id="mobile-menu-button">
+                        <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#home" class="block text-gray-600 dark:text-gray-300">Home</a>
+                <a href="#about" class="block text-gray-600 dark:text-gray-300">About</a>
+                <a href="#skills" class="block text-gray-600 dark:text-gray-300">Skills</a>
+                <a href="#experience" class="block text-gray-600 dark:text-gray-300">Experience</a>
+                <a href="#projects" class="block text-gray-600 dark:text-gray-300">Projects</a>
+                <a href="#contact" class="block text-gray-600 dark:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 motion-safe:animate-fadeIn">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
+                        Hi, I'm Md Yasin Miah
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-primary mb-6">Software Engineer</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        A self-motivated and diligent individual with a strong proficiency in web development.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com" target="_blank" 
+                           class="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+                            Connect with me
+                        </a>
+                        <a href="#projects" 
+                           class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 motion-safe:animate-fadeInRight">
+                    <img src="https://via.placeholder.com/500" alt="Profile" class="rounded-full mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+                <p class="mb-6">
+                    A self-motivated and diligent individual with a strong proficiency in web development. 
+                    Skilled in crafting clean, efficient, and responsive web solutions. 
+                    Dedicated to delivering high-quality work and staying at the forefront of industry best practices.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Education</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium">B.Sc. in Computer Science & Engineering</h4>
+                                <p>Sonargaon University (2021-Present)</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">H.S.C: Science</h4>
+                                <p>GPA: 5.00 (Out of 5)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Info</h3>
+                        <div class="space-y-2">
+                            <p><i class="fas fa-envelope mr-2"></i> mdyasinmiah46@gmail.com</p>
+                            <p><i class="fas fa-phone mr-2"></i> +8801797365053</p>
+                            <p><i class="fas fa-map-marker-alt mr-2"></i> Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Front End</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript, TypeScript</li>
+                        <li>React.js, React Router</li>
+                        <li>Bootstrap, Material UI</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Back End</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Tools</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>VS Code</li>
+                        <li>Git & GitHub</li>
+                        <li>NPM</li>
+                        <li>Chrome Dev Tools</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Familiar With</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>Tailwind CSS</li>
+                        <li>SCSS</li>
+                        <li>Redux</li>
+                        <li>React Redux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Professional Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Current Job -->
+                <div class="relative pl-8 border-l-2 border-primary">
+                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-0"></div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Front-End Developer</h3>
+                        <p class="text-primary">TechForing Ltd</p>
+                        <p class="text-gray-600 dark:text-gray-300">Jan 2022 - Present</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>Develop and manage HRMS modules</li>
+                        <li>Create company portfolio and real-time dashboards</li>
+                        <li>Prioritize user-friendly interfaces</li>
+                        <li>Collaborate with teams for integration</li>
+                    </ul>
+                </div>
+
+                <!-- Previous Job -->
+                <div class="relative pl-8 border-l-2 border-primary">
+                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-0"></div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Front-End Developer</h3>
+                        <p class="text-primary">FasholDotcom Ltd</p>
+                        <p class="text-gray-600 dark:text-gray-300">June 2022 - December 2022</p>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>Developed user-facing features using React.js</li>
+                        <li>Built reusable components and libraries</li>
+                        <li>Translated designs into high-quality code</li>
+                        <li>Implemented API integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://via.placeholder.com/400x250" alt="Project 1" class="w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">World-Class Car</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A full-stack car selling web app with user authentication and admin dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">React.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:underline">Live Demo</a>
+                            <a href="#" class="text-primary hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://via.placeholder.com/400x250" alt="Project 2" class="w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Food Ota-food</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A full-stack food delivery web application with user authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">React.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Express.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Firebase</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:underline">Live Demo</a>
+                            <a href="#" class="text-primary hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm">
+                    <img src="https://via.placeholder.com/400x250" alt="Project 3" class="w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">React Redux App</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A category-based news portal web app with admin approval system.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">React.js</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Redux</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm">Firebase</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:underline">Live Demo</a>
+                            <a href="#" class="text-primary hover:underline">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Get In Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 dark:text-gray-300 mb-4 md:mb-0">
+                    © 2024 Md Yasin Miah. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-primary">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Check for saved theme preference
+        if (localStorage.theme === 'dark' || 
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        Array.from(mobileLinks).forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
